@@ -1,0 +1,10 @@
+package kr.or.ddit.basic;
+
+public class ArgsTest {
+	
+	// 메서드 만들기
+	// 매개변수로 받은 정수
+	public static void main(String[] args) {
+
+	}
+}//

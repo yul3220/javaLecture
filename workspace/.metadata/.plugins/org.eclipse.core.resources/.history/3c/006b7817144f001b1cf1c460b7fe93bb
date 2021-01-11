@@ -1,0 +1,21 @@
+package kr.or.ddit.basic;
+
+public class StackQueueTest {
+/*
+  Stack(스택) => 후입선출(LIFO , Last In First Out)의 자료 구조
+  
+  Queue(큐) => 선입선출(FIFO, First In First Out)의 자료 구조
+  
+ */
+	public static void main(String[] args) {
+		/*
+		 Stack의 명령
+		 1. 자료 입력 : push(입력값)
+		 2. 자료 출력 :
+		  - pop() ==> 자료를 꺼내온 후 꺼내온 자료를 Stack에서 삭제한다.
+		  - peek() ==> 삭제 없이 자료를 꺼내온다.(주로 자료 확인용으로 사용)
+		 */
+
+	}
+
+}//

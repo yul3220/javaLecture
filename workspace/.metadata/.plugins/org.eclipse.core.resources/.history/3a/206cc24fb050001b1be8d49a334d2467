@@ -1,0 +1,93 @@
+package kr.or.ddit.basic;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class EqulasHashCodeTest {
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		p1.setId(1);
+		p1.setName("홍길동");
+		
+		Person p2 = new Person();
+		/*p2.setId(2);
+		p2.setName("일지매");*/
+		p2.setId(1);
+		p2.setName("홍길동");
+		
+		Person p3 = p1;
+		
+		System.out.println(p1==p2);
+		//주소 값을 가지고 비교하기 때문에 이름이나 아이디가 같아도 결과는 false이다.
+		System.out.println(p1.equals(p2));
+		//주소가 달라도 이름이나 아이디가 같으면 같게끔 정의하기 위해서는 override를 통해 
+		//다시 정의해 해야한다.
+		System.out.println("-----------------------------------");
+		
+		Set<Person> testSet = new HashSet<>();
+		testSet.add(p1);
+		testSet.add(p2);
+		
+		System.out.println("set의 크기 : " + testSet.size());
+		//set에서는 p1과 p2의 값이 같아도 같다고 취급하지 않는다.
+		
+		System.out.println("p1의 hashcode : " + p1.hashCode());
+		System.out.println("p2의 hashcode : " + p2.hashCode());
+		System.out.println("p3의 hashcode : " + p2.hashCode());
+	}//main
+}//
+
+class Person{
+	private int id;
+	private String name;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Person other = (Person) obj;
+		if (id != other.id)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
+	
+}
+
+//

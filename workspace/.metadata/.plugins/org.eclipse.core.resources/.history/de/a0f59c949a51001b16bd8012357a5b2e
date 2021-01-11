@@ -1,0 +1,78 @@
+package kr.or.ddit.basic;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Hotel {
+	Scanner sc = new Scanner(System.in);
+	HashMap<Integer, Room> hotel = new HashMap<>();
+	public static void main(String[] args) {
+		new Hotel().start();
+	}
+	
+	private void start(){
+		System.out.println("*****************************");
+		System.out.println("   호텔문을 열었습니다. 어서오십시요.");
+		System.out.println("*****************************");
+		while(true){
+			int choice = displayMenu();]
+			switch(choice){
+			case 1: 
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4: 
+				System.out.println("*******************");
+				System.out.println(" 호텔문을 닫았습니다.");
+				System.out.println("*******************");
+				System.exit(0);
+			default:
+				System.out.println("다른 번호를 입력하였습니다.");
+			}
+		}
+	}
+	
+	private int displayMenu(){
+		System.out.println("--------------------------------------");
+		System.out.println("어떤 업무를 하시겠습니까?");
+		System.out.println("1.체크인\t2.체크아웃\t3.객실상태\t4.업무종료");
+		System.out.println("--------------------------------------");
+		System.out.print("선택>> ");
+		int num = Integer.parseInt(sc.nextLine());
+		return num;
+	}
+}
+
+class Room{
+	private int RoomNum;
+	private String Roomkind;
+	private String Name;
+	
+	public int getRoomNum() {
+		return RoomNum;
+	}
+	
+	public void setRoomNum(int roomNum) {
+		RoomNum = roomNum;
+	}
+	
+	public String getRoomkind() {
+		return Roomkind;
+	}
+	
+	public void setRoomkind(String roomkind) {
+		Roomkind = roomkind;
+	}
+	
+	public String getName() {
+		return Name;
+	}
+	
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	
+}

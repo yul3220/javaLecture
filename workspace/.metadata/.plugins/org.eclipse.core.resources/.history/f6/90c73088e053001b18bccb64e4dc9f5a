@@ -1,0 +1,22 @@
+package kr.or.ddit.basic;
+
+public class ThreadTest03 {
+	public static void main(String[] args) {
+		// 쓰레드가 수행되는 시간을 체크해보자.
+		Thread rh = new Thread(new MyRunner());
+		rh.start();
+	}
+}//
+
+// 1 ~ 10억까지의 합계를 구하는 쓰레드
+class MyRunner implements Runnable{
+	@Override
+	public void run() {
+		long sum = 0L;
+		for(long i = 1L; i<=1_000_000_000L; i++){
+			//3자리마다 언더바를 사용할 수 있음(,용도)
+			sum += i;
+		}
+		System.out.println("합계 : " + sum);
+	}
+}

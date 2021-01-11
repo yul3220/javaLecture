@@ -1,0 +1,27 @@
+package kr.or.ddit.basic;
+
+class NonGenericClass{
+	private Object value;
+	
+	public void setValue(Object value){
+		this.value = value;
+	}
+
+	public Object getValue() {
+		return value;
+	}
+	
+	/*get()과 set() 쓰는 이유 : 우리는 필드로 무언인가를 선언할 때, 
+	 	일반적으로는 프라이빗 접근제한자를 사용한다(고 한다 → 클래스를 선언할 때 필드는 일반적으로 접근 제한을 한다. )
+		이는 필드의 값을 보호하기 위함으로 private 접근 제한자로 보호하게 되면 
+		외부에서 필드의 값을 읽거나 쓸수가 없게 되므로 getter와 setter를 추가적으로 제공하여
+		필드의 값도 보호하면서 외부에서 필드의 값을 읽고 변경을 할 수 있도록 방법을 제공해주기 위함이다.
+		
+		또한, private를 해놓고 if를 통해 다른클래스에서  값을 받을때 범위에 따라 제한해서 받을 수 있다.*/
+}
+
+public class GenericTest {
+	public static void main(String[] args) {
+		
+	}
+}
