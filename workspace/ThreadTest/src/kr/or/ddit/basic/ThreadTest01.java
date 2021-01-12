@@ -13,6 +13,5 @@ public class ThreadTest01 {
 			System.out.print("$");
 		}
 		System.out.println();
-		
 	}
 }//
