@@ -12,13 +12,22 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyGeneric"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread2"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyCountDown"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.UpperThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.LowerThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.AutoSaveThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.TargetThread"/>
+<fullyQualifiedTypeName name="java.lang.Thread.State"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.StartPrintThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.DisplayCharacter"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest1"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 </qualifiedTypeNameHistroy>

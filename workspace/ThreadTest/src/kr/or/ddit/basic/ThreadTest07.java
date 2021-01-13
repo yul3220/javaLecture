@@ -38,7 +38,7 @@ class Data extends Thread{
 	@Override
 	public void run() {
 		String[] rsp = {"가위", "바위", "보"};
-		int output = (int)((Math.random()*2));
+		int output = (int)((Math.random()*3));
 		String com = rsp[output];
 		
 		String user = JOptionPane.showInputDialog("가위, 바위, 보 중에 입력하세요.");
