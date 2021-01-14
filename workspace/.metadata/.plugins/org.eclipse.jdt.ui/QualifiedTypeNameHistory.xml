@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.StackTest.Browser"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
@@ -15,9 +14,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyCountDown"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.UpperThread"/>
@@ -30,4 +26,21 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThread"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest1"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.Horse"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.GameState"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ShareData"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.CalcPIThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.PrintPIThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ShareObject"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.TestThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadTest17"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

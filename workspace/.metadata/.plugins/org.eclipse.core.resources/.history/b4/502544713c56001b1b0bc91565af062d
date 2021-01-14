@@ -1,0 +1,51 @@
+package kr.or.ddit.basic;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+// 은행의 입출금을 쓰레드로 처리하는 예제
+// (Lock객체를 이용한 동기화 처리 예제)
+public class ThreadTest18 {
+	private int balance; // 잔액이 저장될 변수
+
+	// 동기화 처리를 해주는 Lock객체 생성하기
+	private Lock lock = new ReentrantLock();
+	
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	// 입금하는 메서드
+	public void deposit(int money){
+		balance += money;
+	}
+
+	// 출금하는 메서드(출금 성공 : true, 출금 실패 : false 반환)
+	public boolean withdraw(int money){
+		// Lock객체는 lock()메서드로 락을 설정하고
+		// 반드시 unlock()메서드로 락을 해제해 주어야 한다.
+		
+		lock.lock(); // 락 설정 시작....
+		boolean chk = false;
+		if(balance >= money){
+			for(int i = 1 ; i< 100000000; i++){} // 시간 지연용
+
+			balance -= money;
+			System.out.println("메소드 안에서 balance = " + balance);
+			chk = true;
+		}else{
+			chk = false;
+		}
+		
+		lock.unlock();
+		return chk;
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

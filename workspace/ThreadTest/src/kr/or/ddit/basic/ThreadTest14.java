@@ -30,7 +30,6 @@ public class ThreadTest14 {
 			e.printStackTrace();
 		}
 		th2.interrupt();
-		
 	}
 }
 
@@ -72,8 +71,6 @@ class ThreadStopTest2 extends Thread{
 			
 		}*/
 		
-		
-		
 		//방법2
 		while(true){
 			System.out.println("Thread 실행중...");
@@ -100,28 +97,3 @@ class ThreadStopTest2 extends Thread{
 //		System.out.println("쓰레드 종료.....");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
