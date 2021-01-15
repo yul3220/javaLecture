@@ -1,0 +1,41 @@
+package kr.or.ddit.basic;
+
+import java.io.File;
+
+public class FileTest02 {
+	public static void main(String[] args) {
+		File f1 = new File("d:/D_Other/test.txt");
+		//유닉스와 리눅스는 대소문자도 구분한다. 윈도우는 소문자를 써도 대문자를 써도 관계x
+		System.out.println(f1.getName() + "의 크기 : " + f1.length() +"Bytes");
+		System.out.println("f1의 path : " + f1.getPath());
+		System.out.println("f1의 절대 경로 : " + f1.getAbsolutePath());
+		System.out.println();
+		
+		//File f2 = new File(".");
+		//. 작성하면  D:\A_TeachingMaterial\3.HighJava\workspace\javaIOTest\.
+		File f2 = new File("");
+		//""작성하면  D:\A_TeachingMaterial\3.HighJava\workspace\javaIOTest
+		// 이클립스에서 'java파일'의 실행 위치는 실행하는 java파일이
+		// 있는 '프로젝트명'까지를 말한다.
+		System.out.println("f2의 path : " + f2.getPath());
+		System.out.println("f2의 절대 경로 : " + f2.getAbsolutePath());
+		System.out.println();
+		
+		if(f1.isFile()){
+			System.out.println(f1.getName() + "은 파일입니다.");
+		}else if(f1.isDirectory()){
+			System.out.println(f1.getName() + "은 디렉토리입니다.");				
+		}else{
+			System.out.println(f1.getName() + "은 아직 모릅니다.");							
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
