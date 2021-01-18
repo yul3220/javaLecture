@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.StackTest.Browser"/>
-<fullyQualifiedTypeName name="java.util.Comparator"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.Map.Entry"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyGeneric"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread2"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -25,9 +17,7 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.DisplayCharacter"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThread"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest1"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.Horse"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.GameState"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ShareData"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.CalcPIThread"/>
@@ -43,4 +33,31 @@
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.WorkObject"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadA"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.DataInput"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.DataBox"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ProducerThread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.ConsumerThread"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="java.nio.file.Path"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.FileTest03"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 </qualifiedTypeNameHistroy>
