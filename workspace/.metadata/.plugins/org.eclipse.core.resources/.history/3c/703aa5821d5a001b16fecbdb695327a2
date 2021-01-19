@@ -1,0 +1,84 @@
+package kr.or.ddit.basic;
+
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class ObjectIOTest {
+	
+	// 객체를 파일에 저장하는 예제
+	public static void main(String[] args) {
+		// Member의 인스턴스 생성
+		Member mem1 = new Member("홍길동", 22, "대전");
+		Member mem2 = new Member("홍길서", 33, "울산");
+		Member mem3 = new Member("홍길남", 44, "인천");
+		Member mem4 = new Member("홍길복", 55, "원주");
+		
+		try {
+			// 객체를 파일에 저장하기
+			FileOutputStream fout = new FileOutputStream("d:/d_other/memObj.bin");
+			
+			BufferedOutputStream bos = new BufferedOutputStream(fout);
+			ObjectOutputStream oos = new ObjectOutputStream(bos);
+			
+			// 쓰기 작업
+			System.out.println("객체 저장하기 시작...");
+			oos.writeObject(mem1);
+			oos.writeObject(mem2);
+			oos.writeObject(mem3);
+			oos.writeObject(mem4);
+			System.out.println("객체 저장하기 끝...");
+			
+			oos.close(); // 스트림 닫기
+			// 가장 바깥쪽에 있는 Stream을 닫으면 그 안에 있는 Stream은 저절로 닫힌다.
+			
+			//==================================================
+ 		} catch (IOException e) {
+			
+		}
+	}
+}
+
+class Member implements Serializable{//데이터를 저장할 목적으로 만든 클래스
+	
+	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = -1096438140999733430L;
+	//implements Serializable하면 Member밑에 노란글이 뜨는데 그것중 클릭하면 생기는것
+
+	private String name;
+	private int age;
+	private String addr;
+	
+	public Member(String name, int age, String addr) {
+		this.name = name;
+		this.age = age;
+		this.addr = addr;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getAddr() {
+		return addr;
+	}
+
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	
+}
