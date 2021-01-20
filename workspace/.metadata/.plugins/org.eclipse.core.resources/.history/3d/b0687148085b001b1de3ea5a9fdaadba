@@ -1,0 +1,28 @@
+package Test;
+
+public class Solution {
+	public static boolean solution(String s) {
+        boolean answer = true;
+        if(s.length()==4 || s.length() == 6){
+            for(int i=0; i<s.length(); i++){
+                String a = s.substring(i, i+1);
+                int b =  Integer.parseInt(a);
+                char c = Integer.toString(b).charAt(0);
+                
+                if(31<=c && c<=39){
+                	answer = true;
+                }else{
+                	answer = false;
+                }
+            }
+        }else{
+            answer = false;
+        }
+        return answer;
+    }
+	
+	public static void main(String[] args) {
+		boolean a = solution("a123");
+		System.out.println(a);
+	}
+}

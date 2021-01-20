@@ -1,0 +1,33 @@
+package Test;
+
+public class Solution {
+	static boolean solution(String s) {
+        boolean answer = true;
+        int ycount = 0;
+        int pcount = 0;
+        for(int i=0; i<s.length(); i++){
+        	char c = s.charAt(i);
+        	if(c == 'y' || c == 'Y'){
+        		ycount++;
+        	}
+        	if(c == 'p' || c == 'P'){
+        		pcount++;
+        	}
+        }
+        
+        if(ycount==pcount || (ycount==0&&pcount==0)){
+        	answer = true;
+        }else{
+        	answer = false;
+        }
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        System.out.println("Hello Java");
+
+        return answer;
+    }
+	  
+	  public static void main(String[] args) {
+		boolean n = solution("pPoooyY");
+		System.out.println(n);
+	  }
+}
