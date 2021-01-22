@@ -1,0 +1,25 @@
+package kr.or.ddit.basic.tcp;
+
+import java.net.Socket;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TcpMultiChatServer {
+	// 접속한 클라이언트 정보를 저장할 Map객체 변수 선언
+	// ==> key값 : 접속한 사람의 이름, value값 : 접속한 Socket객체
+	//client와 연결되어 있는 소켓을 저장하기 위한 공간
+	private Map<String, Socket> clientMap;
+	
+	// 생성자
+	public TcpMultiChatServer(){
+		// Map객체 동기화 처리
+		clientMap = Collections.synchronizedMap(
+					new HashMap<String, Socket>()
+				);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}
