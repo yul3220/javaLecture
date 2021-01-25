@@ -1,8 +1,0 @@
-package kr.or.ddit.basic;
-
-public class BufferedIOTest02 {
-	public static void main(String[] args) {
-		// 문자 기반의 Bufferd스트림 사용하기
-		
-	}
-}
