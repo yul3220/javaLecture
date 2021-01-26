@@ -1,0 +1,58 @@
+package kr.or.ddit.basic;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JdbcTest05 {
+	public static void main(String[] args) {
+		Connection conn = null;
+		Statement stmt = null;
+		PreparedStatement ps = null; 
+		Scanner scan = new Scanner(System.in);
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			conn = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe",
+					"JYR03",
+					"java");
+			
+			System.out.println("계좌번호 정보 추가하기");
+			System.out.print("계좌번호  : ");
+			String bankNo = scan.next();
+			
+			System.out.print("은행명  : ");
+			String bankName = scan.next();
+			
+			System.out.print("예금주명  : ");
+			String userName = scan.next();
+			
+			// Statement객체를 이용하기
+			String sql = "insert into bankinfo(bank_no, bank_name, bank_user_name, bank_date)"
+					+ " values('" + bankNo + "','" + bankName 
+					+ "','" + userName + "', sysdate)";
+			
+			System.out.println("SQL : " + sql);
+			
+			stmt = conn.createStatement();
+			
+			// SQL문이 select문일 때의 실행은 excuteQuery()메서드를 사용하고
+			// SQL문 insert, update, delete등과 같이  select문이 아닐 경우에는
+			// excuteUpdate()메서드를 사용하여 실행한다.
+			// excuteUpdate()메서드의 반환값은 작업에 성공한 레코드 수 이다.
+			
+			int result = stmt.executeUpdate(sql);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
