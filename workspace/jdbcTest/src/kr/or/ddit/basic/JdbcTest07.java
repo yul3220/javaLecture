@@ -20,12 +20,12 @@ import kr.or.ddit.util.DBUtil;
   	2. 자료 삭제
   	3. 자료 수정
   	4. 전체 자료 출력
+  	5.
   	0. 작업 끝.
   	-----------
   	작업선택 >> 
   	
   	자료추가할떄는 아이디가 주요키이기 때문에 id를 체크하는것도 있어야한다.
-  	
 */
 public class JdbcTest07 {
 	Connection conn = null;
@@ -54,6 +54,9 @@ public class JdbcTest07 {
 				case 4:
 					show();
 					break;
+				case 5:
+					update2();
+					break;
 				case 0:
 					System.out.println("프로그램을 닫습니다.");
 					System.exit(0);
@@ -64,7 +67,96 @@ public class JdbcTest07 {
 		}
 	}
 
-	private void add() {
+	// 회원 정보를 수정하는 메서드(원하는 컬럼 한가지만 수정한다.)
+	private void update2() {
+		try {
+			conn = DBUtil.getConnection();
+			String memId; 
+			int count = 0;
+			do{
+				System.out.print("아이디 입력 : ");
+				memId = sc.next();
+				
+				String sql = "select count(*) as cnt"
+						+ " from mymember"
+						+ " where mem_id = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, memId);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()){
+					count = rs.getInt("cnt");
+				}
+				if(count==0){
+					System.out.println("입력한 아이디 " + memId 
+							+ "는 등록되지 않은 아이디입니다.");
+					System.out.println("다시 입력하세요.");
+				}
+			}while(count==0);
+			
+			System.out.println("============================");
+			System.out.println("      변경하고 싶은 정보    ");
+			System.out.println("============================");
+			System.out.println("1.이름\t2.전화번호\t3.주소");
+			System.out.println("============================");
+			System.out.print("선택 >> ");
+			int input = sc.nextInt();
+			
+			String sql = "";
+			int cnt=0;
+			switch(input){
+				case 1: 
+					System.out.print("변경할 이름>> ");
+					String memName = sc.next();
+					sql = "update mymember set mem_name = ? where mem_id = ?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, memName);
+					pstmt.setString(2, memId);
+					
+					cnt = pstmt.executeUpdate();
+					
+					if(cnt>0){System.out.println("이름 수정 완료!!");}
+					else{System.out.println("이름 수정 실패!!");}
+					return;
+				case 2: 
+					System.out.print("변경할 전화번호>> ");
+					String memTel = sc.next();
+					sql = "update mymember set mem_tel = ? where mem_id = ?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, memTel);
+					pstmt.setString(2, memId);
+					
+					cnt = pstmt.executeUpdate();
+					
+					if(cnt>0){System.out.println("전화번호 수정 완료!!");}
+					else{System.out.println("전화번호 수정 실패!!");}
+					return;
+				case 3: 
+					sc.nextLine();
+					System.out.print("변경할 주소>> ");
+					String memAddr = sc.nextLine();
+					sql = "update mymember set mem_addr = ? where mem_id = ?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, memAddr);
+					pstmt.setString(2, memId);
+					
+					cnt = pstmt.executeUpdate();
+					
+					if(cnt>0){System.out.println("주소 변경 완료!!");}
+					else{System.out.println("주소 변경 실패!!");}
+					return;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			if(rs != null)try{ rs.close(); }catch(SQLException e){}
+			if(pstmt != null)try{ pstmt.close(); }catch(SQLException e){}
+			if(conn != null)try{ conn.close(); }catch(SQLException e){}
+		}
+		
+	}
+
+	private void add(){
 		try {
 			conn = DBUtil.getConnection();
 			String memId; 
@@ -266,6 +358,7 @@ public class JdbcTest07 {
 		System.out.println("2. 자료 삭제");
 		System.out.println("3. 자료 수정");
 		System.out.println("4. 전체 자료 출력");
+		System.out.println("5. 자 료 수 정 2");
 		System.out.println("0. 작업 끝.");
 		System.out.println("-----------");
 		System.out.print("작업선택 >> ");
@@ -273,8 +366,4 @@ public class JdbcTest07 {
 		System.out.println();
 		return num;
 	}
-	
-	
-	
-	
 }

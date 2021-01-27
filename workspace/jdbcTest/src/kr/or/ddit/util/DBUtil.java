@@ -8,7 +8,7 @@ import java.sql.SQLException;
 // 메서드로 구성된 class 만들기
 
 public class DBUtil {
-	// 초기화 블럭
+	// static 초기화 블럭
 	static{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

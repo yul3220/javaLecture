@@ -1,22 +1,20 @@
 import java.util.*;
 
-public class Solution {
-    public static int solution(int n) {
-        int answer = 0;
+class Solution {
+	public static String solution(String s) {
+        String answer = "";
+        String[] word = s.split(" ");
         
-        while(n >= 1) {
-			answer += n % 10;
-			n /= 10;
-		}
-        
-        System.out.println("Hello Java");
-
+        for(int i=0; i<word.length; i++){
+        	String w = word[i];
+        	
+        }
         return answer;
     }
     
     public static void main(String[] args) {
-		int n = 123;
-		int result = solution(n);
-		System.out.println(result);
-	}
+    	String result = solution("try hello world");
+    	System.out.println(result);
+    }
 }
+    

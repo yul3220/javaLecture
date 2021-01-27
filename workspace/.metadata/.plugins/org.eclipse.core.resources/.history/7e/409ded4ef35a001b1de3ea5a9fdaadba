@@ -1,7 +1,0 @@
-package kr.or.ddit.basic.tcp;
-
-public class TcpServer01 {
-	public static void main(String[] args) {
-		
-	}
-}
