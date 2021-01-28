@@ -1,7 +1,0 @@
-package kr.or.ddit.basic.tcp;
-
-import java.net.Socket;
-
-public class TcpFileClientSem {
-	private Socket socket;
-}

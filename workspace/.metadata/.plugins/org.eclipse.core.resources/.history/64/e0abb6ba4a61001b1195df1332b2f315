@@ -1,0 +1,21 @@
+package kr.or.ddit.mvc.service;
+
+import kr.or.ddit.mvc.dao.BoardDaoImpl;
+import kr.or.ddit.mvc.dao.IBoardDao;
+import kr.or.ddit.mvc.vo.BoardVO;
+
+public class BoardServiceImpl implements IBoardService {
+	private IBoardDao boardDao;
+	
+	// 생성자
+	public BoardServiceImpl{
+		boardDao = new BoardDaoImpl();
+	}
+	
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		// TODO Auto-generated method stub
+		return board;
+	}
+
+}

@@ -5,3 +5,10 @@
 1611734192069	Rename resource 'dbinfo.properties'
 1611734200741	Rename resource 'dbinfo.properties2'
 1611734366159	Copy compilation unit
+1611816547837	Rename compilation unit 'MemberServiceImp1.java'
+1611816563312	Rename type 'MemberDaoImp1'
+1611817632703	Move compilation unit
+1611817640298	Move compilation unit
+1611817642365	Copy compilation unit
+1611817669500	Rename type 'JdbcTestSem07'
+1611825765417	Rename compilation unit 'BoardServicelmpl.java'

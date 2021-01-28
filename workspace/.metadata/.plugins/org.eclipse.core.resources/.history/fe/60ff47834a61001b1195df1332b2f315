@@ -1,0 +1,23 @@
+package kr.or.ddit.mvc.service;
+
+import kr.or.ddit.mvc.dao.IBoardDao;
+import kr.or.ddit.mvc.vo.BoardVO;
+
+public class BoardServiceImpl implements IBoardService {
+private IBoardDao boardDao;
+	
+	// 생성자
+	public BoardServicelmpl{
+		//IMemberDao객체인데 어떻게 MemberDaoImpl()객체를 넣을 수 있는지?
+		//그걸 받아서 구현한거라서 조상클래스니까 가능하다.
+		//인터페이스가 조상이고 dao가 interface를 상속받아 구현한것이기때문에 자식이다.
+		boardDao = new MemberDaoImpl();
+	}
+	
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		// TODO Auto-generated method stub
+		return ;
+	}
+
+}

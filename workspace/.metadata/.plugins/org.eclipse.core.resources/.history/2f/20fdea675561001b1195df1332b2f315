@@ -1,0 +1,37 @@
+package kr.or.ddit.mvc.service;
+
+import java.util.List;
+
+import kr.or.ddit.mvc.dao.BoardDaoImpl;
+import kr.or.ddit.mvc.dao.IBoardDao;
+import kr.or.ddit.mvc.vo.BoardVO;
+
+
+public class BoardServiceImpl implements IBoardService {
+	private IBoardDao boardDao;
+	
+	public BoardServiceImpl(){
+		boardDao = new BoardDaoImpl();
+	}
+
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		return boardDao.insertBoard(boardVo);
+	}
+
+	@Override
+	public List<BoardVO> AllBoard() {
+		return boardDao.AllBoard();
+	}
+
+	@Override
+	public BoardVO showBoard(int boardNo) {
+		return boardDao.showBoard(boardNo);
+	}
+
+	@Override
+	public int CountUp(int boardNo) {
+		return boardDao.CountUp(boardNo);
+	}
+
+}

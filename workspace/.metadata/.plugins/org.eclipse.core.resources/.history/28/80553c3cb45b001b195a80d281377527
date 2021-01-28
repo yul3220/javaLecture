@@ -1,5 +1,0 @@
-package TcpFileServerSem;
-
-public class TcpFileClientSem {
-	private Scoket socket;
-}
