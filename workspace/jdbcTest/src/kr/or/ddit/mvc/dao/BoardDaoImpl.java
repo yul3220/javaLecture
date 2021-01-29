@@ -11,7 +11,14 @@ import kr.or.ddit.mvc.vo.BoardVO;
 import kr.or.ddit.util.DBUtil3;
 
 public class BoardDaoImpl implements IBoardDao {
-
+	private static BoardDaoImpl dao;//싱글톤(01.29)
+	
+	private BoardDaoImpl(){}//싱글톤(01.29)
+	
+	public static BoardDaoImpl getInstance(){
+		if(dao == null) dao = new BoardDaoImpl();//싱글톤(01.29)
+		return dao;
+	}
 	@Override
 	public int insertBoard(BoardVO boardVo) {
 		Connection conn = null;

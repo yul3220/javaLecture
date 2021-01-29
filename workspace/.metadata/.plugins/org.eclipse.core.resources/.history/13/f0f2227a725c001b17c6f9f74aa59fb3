@@ -1,7 +1,0 @@
-package kr.or.ddit.basic.tcp;
-
-public class TcpMultiChatClient {
-	public static void main(String[] args) {
-		
-	}
-}

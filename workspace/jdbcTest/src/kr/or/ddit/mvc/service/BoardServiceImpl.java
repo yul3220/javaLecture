@@ -5,12 +5,18 @@ import kr.or.ddit.mvc.dao.BoardDaoImpl;
 import kr.or.ddit.mvc.dao.IBoardDao;
 import kr.or.ddit.mvc.vo.BoardVO;
 
-
 public class BoardServiceImpl implements IBoardService {
 	private IBoardDao boardDao;
+	private static BoardServiceImpl service;
 	
-	public BoardServiceImpl(){
-		boardDao = new BoardDaoImpl();
+	private BoardServiceImpl(){//public에서 privat로 바꿈
+		//boardDao = new BoardDaoImpl();
+		boardDao = BoardDaoImpl.getInstance();//싱글톤(01.29)
+	}
+	
+	public static BoardServiceImpl getInstance(){
+		if(service==null) service = new BoardServiceImpl();
+		return service;
 	}
 
 	@Override

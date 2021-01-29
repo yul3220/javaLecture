@@ -12,7 +12,8 @@ public class BoardController {
 	int boardNo;
 
 	public BoardController(){
-		service = new BoardServiceImpl();
+		//service = new BoardServiceImpl();
+		service = BoardServiceImpl.getInstance();//싱글톤(01.29)
 	}
 
 	public static void main(String[] args){

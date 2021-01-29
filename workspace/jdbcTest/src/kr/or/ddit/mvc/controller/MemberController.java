@@ -1,6 +1,8 @@
 package kr.or.ddit.mvc.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import kr.or.ddit.mvc.service.IMemberService;
 import kr.or.ddit.mvc.service.MemberServiceImpl;
@@ -15,7 +17,8 @@ public class MemberController {
 	
 	//생성자
 	public MemberController(){
-		service = new MemberServiceImpl();
+		//service = new MemberServiceImpl();
+		service = MemberServiceImpl.getInstance();//싱글톤(01.29)
 	}
 	
 	public static void main(String[] args) {
@@ -58,6 +61,7 @@ public class MemberController {
 					break;
 				case 5: // 수정
 					updateMember2();
+					//updateMember2();
 					break;
 				case 0: // 작업 끝
 					System.out.println("작업을 마칩니다.");
@@ -154,7 +158,7 @@ public class MemberController {
 		}	
 	}
 	
-	private void updateMember2() {
+	/*private void updateMember2() {
 		
 		System.out.println();
 		System.out.println("수정할 회원 정보를 입력하세요.");
@@ -211,8 +215,73 @@ public class MemberController {
 		}else{
 			System.out.println("수정 작업 실패~~~~");				
 		}
-	}
+	}*/
 
+	private void updateMember2() {
+		System.out.println();
+		System.out.println("수정할 회원 정보를 입력하세요.");
+		System.out.print("회원ID >> ");
+		String memId = scan.next();
+		
+		int count = service.getMemberCount(memId);
+		if(count==0){ // 없는 회원이면...
+			System.out.println(memId + "회원은 없는 회원ID 입니다.");
+			System.out.println("수정 작업을 마칩니다.");
+			return;
+		}
+		
+		int num;
+		String updateField = null; // 수정할 컬럼명이 저장될 변수
+		String updateStr = null; // 수정할 컬럼의 한글명이 저장될 변수
+		
+		do{
+			System.out.println();
+			System.out.println("수정할 항목을 선택하세요.");
+			System.out.println(" 1.회원이름    2.전화번호   3.회원주소");
+			System.out.println("--------------------------------");
+			System.out.print("수정항목 입력 >> ");
+			num = scan.nextInt();
+			
+			switch(num){
+				case 1:
+					updateField = "mem_name";
+					updateStr = "회원이름";
+					break;
+				case 2:
+					updateField = "mem_tel";
+					updateStr = "전화번호";
+					break;
+				case 3:
+					updateField = "mem_addr";
+					updateStr = "회원주소";
+					break;
+				default:
+					System.out.println("수정 항목을 잘못 입력했습니다.");
+					System.out.println("다시 선택하세요.");
+			}
+		}while(num<1 || num>3);
+		
+		scan.nextLine(); // 입력 버퍼 비우기
+		System.out.println();
+		System.out.print("새로운 " + updateStr + " >> ");
+		String updateData = scan.nextLine();
+		
+		// 수정할 정보를 Map에 추가한다.
+		// Key값 정보 => 회원ID(memid), 수정할컬럼명(field), 수정할 데이터(data)
+		Map<String, String> paramMap = new HashMap<>();
+		paramMap.put("memid", memId);
+		paramMap.put("field", updateField);
+		paramMap.put("data", updateData);
+		
+		int cnt = service.updateMember2(paramMap);
+		
+		if(cnt>0){
+			System.out.println("수정 작업 성공!!!!");
+		}else{
+			System.out.println("수정 작업 실패~~~~");				
+		}
+	}
+	
 	// 회원 정보를 삭제하는 메서드
 	private void deleteMember() {
 		System.out.println();

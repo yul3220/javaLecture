@@ -1,0 +1,7 @@
+package kr.or.ddit.basic.singleton;
+/*
+ 	singleton패턴 ==> 
+*/
+public class Mysingleton {
+
+}
