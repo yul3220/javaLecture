@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.Receiver"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpFileClientSem"/>
-<fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.tcp.TcpMultiChatClient"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
@@ -45,19 +38,26 @@
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.IMemberDao"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.MemberDaoImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.service.IMemberService"/>
-<fullyQualifiedTypeName name="kr.or.ddit.mvc.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.MemberVO"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.IBoardDao"/>
-<fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.BoardDaoImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.service.IBoardService"/>
-<fullyQualifiedTypeName name="kr.or.ddit.mvc.service.BoardServiceImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.controller.BoardController"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.BoardVO"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.singleton.Mysingleton"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.singleton.singletonTest"/>
+<fullyQualifiedTypeName name="kr.or.ddit.mvc.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.BoardDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.mvc.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.LprodVO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+<fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

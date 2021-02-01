@@ -1,7 +1,6 @@
 package kr.or.ddit.mvc.dao;
 
 import java.util.List;
-
 import kr.or.ddit.mvc.vo.BoardVO;
 
 public interface IBoardDao {

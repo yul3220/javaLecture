@@ -113,7 +113,6 @@ public class BoardController {
 			return;
 		}
 
-		
 		List<BoardVO> boardList = service.SearchBoard(title);
 
 		if(boardList==null || boardList.size()==0){//null이면 오류가 뜨는 경우도 있기때문에 검사를 해야한다.
@@ -136,21 +135,21 @@ public class BoardController {
 			int num = scan.nextInt();
 
 			switch(num){
-			case 1: // 추가
-				insertBoard();
-				break;
-			case 2:
-				showBoard();
-				break;
-			case 3:
-				searchBoard();
-				break;
-			case 0: // 작업 끝
-				System.exit(0);
-			default:
-				System.out.println("번호를 잘못 입력했습니다.");
-				System.out.println("다시 입력하세요.");
-			}
+				case 1: // 추가
+					insertBoard();
+					break;
+				case 2:
+					showBoard();
+					break;
+				case 3:
+					searchBoard();
+					break;
+				case 0: // 작업 끝
+					System.exit(0);
+				default:
+					System.out.println("번호를 잘못 입력했습니다.");
+					System.out.println("다시 입력하세요.");
+				}
 		}
 	}
 
@@ -178,18 +177,18 @@ public class BoardController {
 			int input = scan.nextInt();
 
 			switch(input){
-			case 1:
-				updateBoard();
-				break;
-			case 2:
-				deleteBoard();
-				break;
-			case 3:
-				return;
-			default:
-				System.out.println("번호를 잘못 입력했습니다.");
-				System.out.println("다시 입력하세요.");
-			}
+				case 1:
+					updateBoard();
+					break;
+				case 2:
+					deleteBoard();
+					break;
+				case 3:
+					return;
+				default:
+					System.out.println("번호를 잘못 입력했습니다.");
+					System.out.println("다시 입력하세요.");
+				}
 		}
 	}
 

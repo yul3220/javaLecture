@@ -1,7 +1,0 @@
-package kr.or.ddit.basic.udp;
-/*
- 	UDP방식 : 비연결 지향, 신뢰성이 없다. 데이터가 순서대로 도착한다는 보장이 없다.
- */
-public class UdpServer {
-	
-}

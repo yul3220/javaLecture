@@ -1,6 +1,0 @@
-package kr.or.ddit.basic.udp;
-
-//그냥이해만하고 넘어가도 됨
-public class UdpClient {
-
-}
