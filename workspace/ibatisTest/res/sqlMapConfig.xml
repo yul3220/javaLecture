@@ -46,4 +46,7 @@
  	   -->
  	   <sqlMap resource="kr/or/ddit/basic/lprodTest.xml"/>
  	   <sqlMap resource="kr/or/ddit/basic/jdbc06.xml"/>
+ 	   <sqlMap resource="kr/or/ddit/basic/jdbc06Sem.xml"/>
+ 	   <sqlMap resource="kr/or/ddit/mapper/mymember.xml"/>
+ 	   <sqlMap resource="kr/or/ddit/mapper/board.xml"/>
  </sqlMapConfig>
