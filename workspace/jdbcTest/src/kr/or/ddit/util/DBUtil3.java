@@ -34,6 +34,10 @@ public class DBUtil3 {
 					bundle.getString("url"),
 					bundle.getString("user"),
 					bundle.getString("pass"));
+			
+			/*return DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:xe","JYR03",
+					"java");*/
 		} catch (SQLException e) {
 			System.out.println("DB연결 실패~~~");
 			return null;

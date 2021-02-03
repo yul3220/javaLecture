@@ -1,7 +1,0 @@
-package kr.or.ddit.util;
-
-public class ProptiesTest {
-	public static void main(String[] args) {
-		
-	}
-}

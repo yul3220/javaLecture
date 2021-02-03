@@ -116,5 +116,4 @@ public class JdbcBoardDaoImpl implements IJdbcBoardDao {
 		} 
 		return cnt;
 	}
-
 }
