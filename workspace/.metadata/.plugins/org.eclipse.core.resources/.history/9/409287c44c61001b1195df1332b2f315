@@ -1,7 +1,0 @@
-package kr.or.ddit.mvc.service;
-
-import kr.or.ddit.mvc.vo.BoardVO;
-
-public interface IBoardService {
-	public int insertBoard(BoardVO boardVo);
-}
