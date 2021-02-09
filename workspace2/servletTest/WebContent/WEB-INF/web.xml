@@ -17,4 +17,9 @@
     <servlet-name>servletTest01</servlet-name>
     <url-pattern>/servletTest01.do</url-pattern>
   </servlet-mapping>
+  <context-param>
+    <param-name>FILE_NAME</param-name>
+    <param-value>d:/d_other/test.txt</param-value>
+  </context-param>
 </web-app>
+<!-- 처음에 서블릿이 정의될때 환경설정과 같은 값들을 넣음 -->

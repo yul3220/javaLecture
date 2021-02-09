@@ -16,6 +16,7 @@
 	<h2>GET방식 요청 방법2 ==> form 태그의 method 속성을 생략하거나
 	'get'으로 설정한 경우</h2>
 	<form action="http://localhost/servletTest/servletTest03.do" method="get">
+		<input type="button" id="btn" value="스크립트GET 방식 요청"/>
 		<input type="submit" value="Get 방식 요청2"/>
 	</form>
 	<br><hr>
@@ -25,5 +26,15 @@
 	<form action="http://localhost/servletTest/servletTest03.do" method="post">
 		<input type="submit" value="Post 방식 요청"/>
 	</form>
+	<br><hr>
+	
+	<script>
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			// 자바스크립트를 이용한 GET방식요청
+			location.href = "http://localhost/servletTest/servletTest03.do"
+		}
+	</script>
 </body>
 </html>
+<!-- a태그에 link를 걸으면 get방식이다. -->
