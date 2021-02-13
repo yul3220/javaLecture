@@ -129,6 +129,5 @@ public class Test2 {
 			}
 		}
 		System.out.println(str3);
-		sc.close();
 	}//main
 }//
