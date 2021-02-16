@@ -3,7 +3,6 @@ package kr.or.ddit.basic.session;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class SessionReadServlet
- */
 @WebServlet("/sessionReadServlet.do")
 public class SessionReadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -94,12 +90,10 @@ public class SessionReadServlet extends HttpServlet {
 		out.println("<a href='"+ request.getContextPath()+
 				"/basic/03/sessionTest.jsp'>시작문서로 이동하기</a>");
 		
-		
 		out.println("</body></html>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

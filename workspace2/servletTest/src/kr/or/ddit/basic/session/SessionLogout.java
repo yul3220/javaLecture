@@ -13,14 +13,15 @@ public class SessionLogout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 로그아웃은 세션을 삭제한 후 로그인 페이지로 이동한다.			
 		HttpSession session = request.getSession();
 		
-		session.invalidate();  //세션 모두 제거
+		//session을 지울때는 removeAttribute()보다는 다 지우는 것이 좋음
+		session.invalidate();
 		response.sendRedirect(request.getContextPath()+"/basic/03/sessionLogin.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

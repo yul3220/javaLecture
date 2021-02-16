@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class CookieLoginServlet
- */
 @WebServlet("/cookieLoginServlet.do")
 public class CookieLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
