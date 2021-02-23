@@ -1,4 +1,4 @@
-package memberUpdate;
+package kr.or.ddit.member.action;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,7 +10,8 @@ import kr.or.ddit.member.service.MemberServiceImpl;
 import kr.or.ddit.vo.MemberVO;
 import kr.or.ddit.web.IAction;
 
-public class MemberUpdateAction implements IAction {
+public class MemberUpdateFormAction implements IAction {
+
 	@Override
 	public boolean isRedirect() {
 		return false;
@@ -21,20 +22,13 @@ public class MemberUpdateAction implements IAction {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		
-		String mem_id = request.getParameter("mem_id");
-		String mem_name = request.getParameter("mem_name");
-		String mem_tel = request.getParameter("mem_tel");
-		String mem_addr = request.getParameter("mem_addr");
-		
-		MemberVO memVo = new MemberVO();
-		memVo.setMem_id(mem_id);
-		memVo.setMem_name(mem_name);
-		memVo.setMem_tel(mem_tel);
-		memVo.setMem_addr(mem_addr);
+		String memId = request.getParameter("mem_id");
 		
 		IMemberService service = MemberServiceImpl.getInstance();
-		service.updateMember(memVo);
+		MemberVO memVo = service.getMember(memId);
 		
-		return "/member/memberUpdate.ddit";
+		request.setAttribute("memberVo", memVo);
+		
+		return "/member/memberUpdateForm.jsp";	
 	}
 }

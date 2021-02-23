@@ -16,23 +16,17 @@ $(function(){
 	
 	// 수정 버튼 클릭 처리
 	$("#updateBtn").on("click", function(){
-		var memId = $("#mem_id").val(); // 입력한 회원ID 읽어오기
-		
-		$.ajax({
-			url : "<%=request.getContextPath()%>/member/memberUpdate.ddit",
-			method : "post",
-			data : {"mem_id" : memId},
-			dataType : "json",
-			success : function(result){
-				alert("수정버튼클릭");
-			},
-			error : function(xhr){
-				alert("오류 - 상태값 : " + xhr.status);
-			}
-		})
+		var memForm = document.getElementById("memberForm");
+		memForm.action = "<%=request.getContextPath()%>/member/memberUpdateForm.ddit";
+		memForm.submit(); // 서버로 전송하게 하는 메서드
 	})
 	
 	// 삭제 버튼 클릭 처리
+	$("#deleteBtn").on("click", function(){
+		var memForm = $("#memberForm").get(0);
+		memForm.action = "<%=request.getContextPath()%>/member/memberDelete.ddit";
+		memForm.submit();
+	})
 });
 </script>
 </head>
@@ -58,7 +52,7 @@ $(function(){
 		</tr>
 		<tr>
 			<td>회원주소</td>
-			<td><%=memVo.getMem_addr() %></td>
+			<td><%=memVo.getMem_addr()%></td>
 		</tr>
 		<tr>
 			<td colspan="2">

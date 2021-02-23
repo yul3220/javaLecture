@@ -32,6 +32,7 @@
 					//alert(result);
 					if(result=="OK"){
 						$("#idChkResult").html("사용 가능 ID");
+						chkMemId = memId;
 					}else{
 						$("#idChkResult").html("ID 중복 - 사용불가");
 						chkMemId = "";
@@ -47,6 +48,7 @@
 		$("#memberForm").on("submit",function(){
 		      var memId = $("#mem_id").val();
 		      var idChk = $("#idChkResult").html().trim();
+		      a
 		      if(chkMemId!=memId || idChk != "사용가능 ID"){
 		         alert("ID가 중복 되거나 변경되었습니다. 새로운 ID를 입력하세요 ");
 		         $("#mem_id").focus();
