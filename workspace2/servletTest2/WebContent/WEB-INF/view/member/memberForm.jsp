@@ -66,7 +66,7 @@
 		<tr>
 			<td>회원ID</td>
 			<td>
-				<input type="text" name="mem_id" id="mem_id"/>
+				<input type="text" name="mem_id" id="mem_id">
 				<input type="button" value="중복확인" id="idCheck"/><br>
 				<span id="idChkResult"></span>
 			</td>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="board">
+	
+	
+	<select id="AllBoard" parameterClass="string" resultClass="boardvo">
+		select * from jdbc_board
+		where board_title like '%'||#board_title#||'%'
+		order by board_no desc
+	</select>
+	
+	<select id="SelectBoard" parameterClass="int" resultClass="boardvo">
+		select * from jdbc_board
+		where board_no = #board_no#
+	</select>
+	
+	<update id="UpBoardCnt" parameterClass="int">
+		update jdbc_board set board_cnt = board_cnt+1
+		where board_no = #board_no#
+	</update>
+	
+	<insert id="InsertBoard" parameterClass="boardvo">
+		insert into jdbc_board(board_no, board_title, 
+		board_writer, board_date, board_cnt, board_content)
+		values(board_seq.nextval, #board_title#, #board_writer#,
+		 sysdate, 0, #board_content#)
+		 
+		<selectKey keyProperty="board_no" resultClass="int">
+			select board_seq.currval from dual
+		</selectKey>
+	</insert>
+	
+	<delete id="DeleteBoard" parameterClass="int">
+		delete jdbc_board where board_no=#board_no#
+	</delete>
+	
+	<update id="UpdateBoard" parameterClass="boardvo">
+		update jdbc_board 
+		set board_title = #board_title#, board_content=#board_content#
+		where board_no = #board_no#
+	</update>
+</sqlMap>
