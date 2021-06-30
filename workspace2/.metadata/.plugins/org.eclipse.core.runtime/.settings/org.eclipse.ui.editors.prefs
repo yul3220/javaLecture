@@ -1,7 +1,6 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=0efa43e5f6a914530382e95a8d651d1001cffa16
-AbstractTextEditor.Color.Background=28,31,34
 AbstractTextEditor.Color.Background.SystemDefault=false
 AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
 AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
